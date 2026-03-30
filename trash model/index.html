@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Lixo com IA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-decor circle1"></div>
+    <div class="background-decor circle2"></div>
+
+    <main class="glass-container">
+        <header>
+            <h1>Classificador de Lixo</h1>
+            <p>Faça o upload de uma imagem para que a Inteligência Artificial identifique o tipo de lixo.</p>
+        </header>
+
+        <div class="upload-section" id="upload-section">
+            <input type="file" id="image-upload" accept="image/*" class="hidden">
+            <label for="image-upload" class="upload-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span>Clique para selecionar uma imagem</span>
+            </label>
+        </div>
+
+        <div class="preview-section hidden" id="preview-section">
+            <div class="image-wrapper">
+                <img id="image-preview" src="" alt="Preview">
+            </div>
+            <button id="classify-btn" class="primary-btn">Classificar Imagem</button>
+            <button id="reset-btn" class="secondary-btn">Nova Imagem</button>
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>Analisando imagem...</p>
+        </div>
+
+        <div id="results" class="results-container hidden">
+            <h2>Resultados da Análise</h2>
+            <div id="label-container"></div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
