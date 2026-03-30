@@ -98,9 +98,9 @@ Apply concepts of Artificial Intelligence, Machine Learning, Computer Vision, an
 
 👨‍💻 Autores | Authors
 
-Alisson da Silva Ribeiro
-Emily Mangas de Oliveira
-Fernanda Pinheiro
+Alisson da Silva Ribeiro-
+Emily Mangas de Oliveira-
+Fernanda Pinheiro-
 Pedro Henrique Santos Viana
 
 📄 Licença | License
